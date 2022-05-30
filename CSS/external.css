@@ -1,0 +1,51 @@
+h1{
+    color: rgb(185, 120, 35);
+    text-align: center;
+}
+small{
+    font-size: 40px;
+}
+*{
+    color: blueviolet;
+}
+strong{
+    color: yellow;
+}
+a[target="_blank"]{
+    color: brown;
+}
+#id_selector{
+    color: blue;
+}
+.class_selector{
+    color: red;
+    letter-spacing: 40px;
+    line-height: 50px;
+}
+
+.desc_selector a{
+    color: red;
+    line-height: 20px;
+}
+.child_selector>a{
+    color: red;
+
+}
+/* pseudo */
+a:link{
+    color: red;
+}
+a:hover{
+    color: blue;
+}
+a:active{
+    color: yellow;
+}
+a:visited{
+    color: black;
+}
+/* :target */
+:target{
+    color: green;
+    border:1px solid black;
+}
