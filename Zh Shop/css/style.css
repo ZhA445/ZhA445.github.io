@@ -1,0 +1,365 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: font;
+    src: url(../Source_Code_Pro/static/SourceCodePro-Black.ttf);
+}
+
+.logo{
+    width: 100px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left:  40px;
+}
+.brand_name{
+    position: absolute;
+    top: 30px;
+    left: 90px ;
+    font-size: 20px;
+    font-family: font;
+}
+.nav_brand{
+    display: inline-block;
+}
+.navbar ul li{
+
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 25px;
+}
+.navbar ul{
+    float: right;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+
+}
+.nav_iteam:hover{
+    color: #238cb9;
+    letter-spacing: 5px;
+    transition-duration: 1s;
+}
+.cart{
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    left: -10px;
+    background-color: black;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+.background_img{
+    width: 100%;
+}
+.background_text{
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+.background_title{
+    font-family: font;
+    margin-bottom: 15px;
+}
+.shop_now{
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-color: #238cb9;
+    color: #238cb9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.shop_now:hover{
+    background-color: #238cb9;
+    color: white;
+    cursor: pointer;
+    
+}
+.product_header{
+    text-align: center;
+    margin-top: 50px;
+}
+.divided{
+    width: 100px;
+    margin: auto;
+    border: 2px solid #238cb9;
+}
+.product{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+.product_img{
+    width: 100%;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0 ,.15);
+    border-radius: 5px;
+}
+.add_to_cart{
+    padding: 10px 15px;
+    border-radius: 17px;
+    border: 1px solid #a1cadf;
+    background-color: #edf1f3;
+    outline: none;
+}
+.add_to_cart:hover{
+    cursor: pointer;
+}
+.discount{
+    font-size: 13px;
+    color: red;
+    text-decoration: line-through;
+}
+.about{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-image: url(../images/bg.jpg);
+    text-align: center;
+    color: white;
+}
+.about div{
+    padding: 60px;
+}
+.divid{
+    width: 30px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.package_header{
+    margin-top: 50px;
+    margin-left: 80px;
+}
+.package_img{
+    margin-left: 80px;
+    border-radius: 5px;
+    width: 40%;
+    float: left;
+}
+.package_text{
+    position: relative;
+    left: 50px;
+    width: 90%;
+}
+.package_text h2{
+    text-transform: uppercase;
+    
+}
+.package_icon{
+    margin-right: 10px;
+    display: inline-block;
+}
+.package_text_header{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.clear{
+    clear: both;
+}
+.service{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: antiquewhite;
+    margin-top: 50px;
+    padding: 30px 60px;
+    grid-column-gap: 100px;
+}
+.service_text{
+    display: inline-block;
+    margin-left: 20px;
+}
+.service_header{
+    font-size: 22px;
+    font-weight: bold;
+}
+.footer{
+    background-color: rgb(140, 135, 135);
+    text-decoration: none;
+    padding: 35px;
+    text-align: center;
+}
+.footer p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+/* Contact */
+
+.contact_header{
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 40px;
+}
+.contact_text span{
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 70px;
+    background-color: rgb(246, 241, 234);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+.contact_text span h4{
+    margin-bottom: 10px;
+    
+}
+.contact_icon{
+    margin-right: 8px;
+}
+.contact_line{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.map{
+    float: right;
+    margin-bottom: 20px;
+}
+.contact_form{
+    width: 40%;
+   padding-left: 40px;
+  display: grid;
+  
+}
+.contact_form input{
+    width: 400px;
+    height: 30px;
+}
+.contact_form textarea{
+    height: 120px;
+}
+.contact_form label{
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+.contact_button{
+    margin-left: 40px;
+    padding: 5px;
+    border-radius: 30px;
+    border-color: rgb(246, 241, 234);
+    background-color: rgb(246, 241, 234);
+}
+.contact_button:hover{
+    cursor: pointer;
+}
+/* about */
+.about_img{
+    width: 500px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.about_img1{
+    width: 200px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.about_header{
+    float: left;
+    font-size: 50px;
+    width: 400px;
+    margin-left: 70px;
+    margin-right: 15px;
+    margin-top: 70px;
+}
+.about_a{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+.about_text{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.about_icon{
+    margin-left: 10px;
+}
+
+/* about */
+
+.blog{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 40px;
+    margin-left: 160px;
+}
+
+.blog_img{
+    width: 400px;
+    border-radius: 9px;
+}
+.blog_img1{
+    width: 360px;
+    border-radius: 9px;
+}
+.blog_img2{
+    width: 360px;
+    height: 425px;
+    border-radius: 9px;
+}
+.blog p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+/* shop */
+.shop_headimg{
+    width: 50%;
+    height: 200px;
+    position: relative;
+    left: 350px;
+}
+.shop_headtext{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.shop_headtext1{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.shop{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.shop_img{
+    width: 70%;
+    height: 190px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0 ,.15);
+}
+/* .shop_img1{
+    width: 70%;
+    height: 190px;
+    margin-top: 30px;
+    margin-left: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0 ,.15);
+} */

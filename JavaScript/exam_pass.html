@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing marks</title>
+</head>
+<body>
+    <h1>Exam Result</h1>
+    <form name = 'myform'>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="html">HTML</label>
+        <input type="number" name="html" id="html">
+        <br><br>
+        <label for="css">CSS</label>
+        <input type="number" name="css" id="css">
+        <br><br>
+        <label for="js">JavaScript</label>
+        <input type="number" name="js" id="js">
+        <br><br>
+        <button type="button" onclick="result()">Result</button>
+    </form>
+
+    <script>
+        function result() {
+            let name = document.myform.name.value;
+            console.log(name);
+            let html = document.myform.html.value;
+            console.log(html);
+            let css = document.myform.css.value;
+            console.log(css);
+            let js = document.myform.js.value;
+            console.log(js);
+        
+            if ((html >= 50 && css >= 50 && js >= 50) && (html <=80 && css <= 80 && js <= 80)){
+                console.log('pass');
+                document.write('<h1>'+name+' is pass the exam</h1>');
+            }else if((html >=81 && css >= 50 && js >= 50) && (html <= 100 && css <= 80 && js <= 80)){
+                console.log('html') ;
+                document.write('<h1>'+name+' got a destination in the exam with html </h1>');
+            }else if((html >=50 && css >= 81 && js >= 50) && (html <= 80 && css <= 100 && js <= 80)){
+                console.log('css');
+                document.write('<h1>'+name+' got a destination in the exam with css </h1>');
+            }else if((html >=50 && css >= 50 && js >= 81) && (html <= 80 && css <= 80 && js <= 100)){
+                console.log('js');
+                document.write('<h1>'+name+' got a destination in the exam with js </h1>');
+            }else if((html >= 81 && css >= 81 && js >= 50) && (html <= 100 && css <= 100 && js <= 80)){
+                console.log('html  and css')
+                document.write('<h1>'+name+' is pass the exam with flying colors (html and css)</h1>');
+            }else if((html >= 81 && css >= 50 && js >= 81) && (html <= 100 && css <= 80 && js <= 100)){
+                console.log('html  and js')
+                document.write('<h1>'+name+' is pass the exam with flying colors (html and js)</h1>');
+            }else if((html >= 50 && css >= 81 && js >= 81) && (html <= 80 && css <= 100 && js <= 100)){
+                console.log('js  and css')
+                document.write('<h1>'+name+' is pass the exam with flying colors (css and js)</h1>');
+            }else if((html >=81 && css >= 81 && js >= 81) && (html <= 100 && css <= 100 && js <= 100)){
+                console.log('all d');
+                document.write('<h1>'+name+' is pass the exam with all destination </h1>');
+            }else{
+                console.log('fail');
+                document.write('<h1>'+name+' is fail the exam.</h1>');
+            }
+           
+        }
+    </script>
+</body>
+</html>
