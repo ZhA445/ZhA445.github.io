@@ -1,0 +1,53 @@
+  
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial- scale=1.0">
+      <title>Document</title>
+      <style>
+          table,td{
+              border: 1px solid black;
+              border-collapse: collapse;
+          }
+      </style>
+  </head>
+  <body>
+  
+      <form action="">
+          <div>
+              <label for="name">Name</label>
+              <input type="text" id="name">
+          </div>
+          <div>
+              <label for="name">Surname</label>
+              <input type="text" id="surname">
+          </div>
+      </form>
+      <input type="button" onclick="add();" value="Add">
+      <div>
+          <table id="output">
+              <thead><td>Name</td><td>Surname</td></thead>
+              <tbody></tbody>
+          </table>
+      </div>
+      <script>
+        function add(){
+            var name = document.getElementById("name");
+            var surname = document.getElementById("surname");
+            var output = document.getElementById("output");
+            output.innerHTML = "<tr><td>"+name+"</td><td>"+surname+"</td></tr>"
+
+
+        }
+      </script>
+
+      <style>
+        table {
+            color: brown;
+        }
+      </style>
+  
+  </body>
+  </html>

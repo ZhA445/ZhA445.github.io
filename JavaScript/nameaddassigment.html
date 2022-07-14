@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assigement</title>
+</head>
+<body>
+    <!-- <h3>Name Assigement</h3>
+
+    <input type="text" name="name" id="name">
+    <button onclick="add()">Add</button>
+    <br><br>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+        </tr>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+
+    <script>
+        function add(){
+            
+            let name = document.querySelector('#name').value;
+            console.log(name);
+            let th = document.createElement('th');
+            th.innerHTML = name;
+            console.log(th)
+            let data =[
+                
+                th.innerHTML = name,
+            ]
+
+
+            let tbody = document.querySelector('#tbody');
+            myData = '';
+            let i = 1;
+            for (let value of data){
+                
+                myData += `<tr>
+                        <th>${i++}</th>
+                        <th>${name}</th>
+                    </tr>`
+
+
+            }
+            console.log(myData)
+            tbody.innerHTML = myData -->
+
+
+
+           
+            
+            <!-- //  let name = document.querySelector('#name').value;
+            //         console.log(name)
+            //         let th = document.createElement('th');
+            //         tr.innerHTML() = name;
+            //         console.log(th);
+
+
+
+
+                    // let tbody = document.querySelector('tbody');
+                    // let myData = '';
+                    // let i = 1;
+                    // for (let value of data){
+                    //      myData += `<tr>
+                    //             <td>${i++}</td>
+                    //              <td>${value.name}</td>
+                    //          </tr>`
+                    //     }
+                    // console.log(myData)
+                    // tbody.innerHTML(myData)   
+
+
+
+
+
+            // let myData = '';
+
+            // let data = document.querySelector('#name').value;
+            // console.log(data);
+            // num = 1;
+            // let num = document.querySelector('num');
+            // num.innerHTML = num;
+            // let th = document.createElement('th');
+            // th.innerHTML = data;
+            // console.log(th)
+            // let tbody = document.querySelector('#tbody');
+            // tbody.appendChild(th) ;
+            // for (let value of data){
+            //     myData += `<tr>
+            //             <th>${num++}</th>
+            //             <th>${value.name}</th>
+            //         </tr>`
+            // }
+
+            
+
+
+            
+        } -->
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <button onclick="show()">Show</button>
+        <br><br>
+        <table border="1" cellspacing="0" cellpadding="20">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead> 
+            <tbody id="tbody">
+
+            </tbody>
+
+        </table>
+
+        <script>
+            let j = 1;
+            function show(){
+                let name= document.querySelector('#name').value;
+                let email = document.querySelector('#email').value;
+                let tbody = document.querySelector('#tbody');
+
+                tbody.innerHTML += `<tr>
+                        <td>${j++}</td>
+                        <td>${name}</td>
+                        <td>${email}</td>
+                    </tr>`
+            }
+        </script>
+        
+    <!-- </script> -->
+</body>
+</html>

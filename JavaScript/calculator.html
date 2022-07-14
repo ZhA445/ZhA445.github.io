@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form action="">
+            <label for="num1">Number One</label>
+            <input type="number" name="num1" id="num1">
+            <br><br>
+            <label for="num2">Number two</label>
+            <input type="number" name="num2" id="num2">
+            <br><br>
+            <label for="result">Result</label>
+            <input type="number" name="result" id="result" readonly>
+            <br><br>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="sub()">Sub</button>
+    
+        </form>
+    
+        <script>
+            function add(){
+                let number1 = document.querySelector('#num1').value;
+                console.log(number1)
+                let number2 = document.querySelector('#num2').value;
+                console.log(number2);
+                let result = Number(number1) + Number(number2);
+            
+                document.querySelector('#result').value = result;
+                console.log(result)
+            }
+            
+    
+            function sub(){
+                let number1 = document.querySelector('#num1').value;
+                let number2 = document.querySelector('#num2').value;
+                let result = Number(number1) - Number(number2);
+                document.querySelector('#result').value = result;
+            }
+        </script>
+    </body>
+    </html>
+    

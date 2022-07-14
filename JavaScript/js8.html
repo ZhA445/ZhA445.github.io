@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funName(){
+            document.write(`<h3>Hello Function</h3>`)
+        }
+        funName();
+
+        function result(num1,num2){
+            let res = num1 + num2;
+            document.write(`<h3>${res}</h3>`)
+        }
+        result(12 , 12)
+
+        function SubResult(num1 = 15 , num2 = 10){
+            let sub_res =num1 - num2;
+            document.write(`<h3>${sub_res}</h3>`)
+        }
+        
+        SubResult(14, 12)
+
+        // Object
+        // let laptops ={
+        //     name : 'Apple',
+        //     type : 'Macbook pro',
+        //     price: 2300000
+        // };
+        // console.log(laptops.name);
+        // console.log(laptops.type);
+        // console.log(laptops['price']);
+        let laptops ={
+            name : 'Lenovo',
+            type : 'Ideapad flex 5',
+            price : 1600000
+        };
+        console.log(laptops.name);
+        console.log(laptops.price);
+        console.log(laptops['type']);
+
+
+    </script>
+</body>
+</html>
