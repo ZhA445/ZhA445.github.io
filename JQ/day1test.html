@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        // jQuery
+
+        var h2withjq = $("h2")
+        console.log(h2withjq)
+
+        var myp = $("div.myp")
+        console.log(myp)
+
+        var btn = ('button')
+        console.log(btn)
+
+        var firstli = $('#contents ul li:first')
+        console.log(firstli)
+
+        if(firstli.length){
+        console.log('Getting first li')
+        }
+
+        var foo = $("div.foo").has('p')
+        console.log(foo)
+        
+        var myh1 = $("h1").not(".bar")
+        console.log(myh1)
+
+        var li1 = $("#ul123 ul li").first()
+        console.log(li1)
+
+        var ulcurrent = $("#current ul li").filter(".current")
+        console.log(ulcurrent)
+
+        var eq = $("#ul123 ul li").eq(1)
+        console.log(eq)
+    })
+    </script>
+</head>
+<body>
+    <h2 id="h2">Zin Htet</h2>
+
+    <p class="myp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem recusandae, voluptatem aliquid nemo ut ex at deserunt voluptas est libero consequatur atque commodi quis modi! Molestiae, quas? Ratione, deleniti ipsum?</p>
+
+    <div class="myp"> Zinnnn</div>
+
+    <button>
+        Click me
+    </button>
+
+    <div id="contents">
+        <div>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- $( "div.foo" ).has( "p" ); -->
+
+    <div class="foo">
+        <p>a</p>
+    </div>
+
+    <div class="foo">
+        <p>b</p>
+    </div>
+
+    <div>
+        <p>c</p>
+    </div>
+
+    <div >
+        <p>d</p>
+    </div>
+
+    <!-- $( "h1" ).not( ".bar" ); -->
+
+    <h1>HeartBurn</h1>
+    <h1>Agent</h1>
+    <h1 class="bar">Designer</h1>
+
+    <!-- $( "ul li" ).first(); -->
+
+    <div id="ul123">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <!-- $( "ul li" ).filter( ".current" );  -->
+
+    <div id="current">
+        <ul>
+            <li>g</li>
+            <li class="current">h</li>
+        </ul>
+    </div>
+
+
+
+
+    
+</body>
+</html>

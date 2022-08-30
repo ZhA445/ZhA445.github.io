@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 form test</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $("button").on("click",function(){
+        //         var check = $("form :input")
+        //         console.log(check)
+
+        // })
+
+        // var form1 = $("form :checked")
+        // console.log(form1)
+        
+        // var form2 = $("form :disabled")
+        // console.log(form2)
+
+        // var form3 = $("form :input")
+        // console.log(form3)
+
+        // var form4 = $("form :selected")
+        // console.log(form4)
+
+        // $("form").hide('slow',function(){
+        //     alert('ok')
+        // })
+
+        
+        // })
+        // $(function(){
+        //     $("a").on('click',function(e){
+        //     alert('ok')
+        //     e.preventDefault();
+        // })
+
+        $('#myform').on("submit",function(e){
+            var username = $('#username').val()
+            var eamil = $('input[name="email"]').val()
+            // var age = Number($('input[name="age"]')).val()
+            alert(email)
+            // var err = flase;
+        // if (username.length <= 5){
+        //     err = true;
+        // }
+        // if(age <18){
+        //     err = true;
+        // }
+        // if(err == true ){
+        //     e.preventDefalult()
+        // }
+        })
+
+        // })
+    
+
+        
+    </script>
+</head>
+<body>
+    <h1>form</h1>
+
+    <!-- $( "form :checked" ); -->
+    <!-- <form action="">
+        <input type="checkbox" checked>
+        <label for="lenguage">JQ</label><br>
+
+        <input type="checkbox">
+        <label for="language">JavaScript</label><br>
+        <option value="" selected>zom</option>
+
+        <input type="checkbox" disabled>
+        <label for="language">Python</label><br>
+
+        
+    </form>
+    
+
+    <button>click</button><br> -->
+
+    <a href="https://googl.com">Google</a>
+
+    <form action="" method="get" id="myform">
+        <input type="text" name="username" id="username" ><br>
+        <input type="email" name="email" id="email"><br>
+        <!-- <input type="number" name="age" id="age"><br> -->
+        <input type="submit" name="btnsubmit" id="submit" value="save">
+    </form>
+</body>
+</html>

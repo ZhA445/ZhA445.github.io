@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+                $('input[name="checkbox"]').on('click',function(e){
+                    var username = $('#name').val();
+                    // var reading= $('#reading').val();
+                    // var guitar = $('#guitar').val();
+                    // var game = $("#game").val();
+                    var checkboxes = $('input[name= "checkbox"]').val();
+                
+        
+                $('#myform').on('submit',function(event){
+                    event.preventDefault()
+
+                    var reading = $('#reading').val();
+                    var guitar = $('guitar').val();
+                    var game = $ ('game').val();
+                    
+                    if(checkboxes== 0){
+                        console.log('a')
+                    }
+                    else if(checkboxes ==1){
+                        console.log('b')
+                    }else{
+                        console.log('c')
+                    }
+
+                
+                // var username = $('#name').val();
+                // var reading= $('#reading').val();
+                // var guitar = $('#guitar').val();
+                // var game = $("#game").val();
+                
+                // console.log(username)
+                // console.log( reading)
+                // console.log( guitar)
+                // console.log(game)
+            })
+
+            })
+
+            
+        })
+
+        
+    </script>
+</head>
+<body>
+
+    
+    <form action="" id="myform">
+        <input type="text" name="username" id="name" placeholder="Name">
+        <br>
+        <p>Hobbies :</p>
+        <input type="checkbox" name="checkbox" id="reading" class="checkbox" value="0">
+        <label for="reading" >Reading</label>
+        <input type="checkbox" name="checkbox" id="guitar" class="checkbox" value="1">
+        <label for="guitar" >Playing Guitar</label>
+        <input type="checkbox" name="checkbox" id="game" class="checkbox" value="2">
+        <label for="game" >Game</label><br><br>
+
+        <input type="submit" value="Save">
+    
+        
+    </form>
+    
+</body>
+</html>
+
+
+<!-- if(checkbox == 0 && checkbox != 1 && checkbox != 2){
+    //     console.log('book')
+    // }
+    // else if(checkbox == 0 && checkbox == 1 && checkbox != 2){
+    //     console.log('book & guitar')
+    // }
+    // else if(checkbox == 0 && checkbox == 1 && checkbox == 2){
+    //     console.log('all')
+    // }
+    // else if(checkbox == 0 && checkbox != 1 && checkbox == 2){
+    //     console.log('book & game')
+    // }
+    // else if(checkbox != 0 && checkbox == 1 && checkbox == 2){
+    //     console.log('guitar && game')
+    // }
+    // else if(checkbox != 0 && checkbox != 1 && checkbox == 2){
+    //     console.log('game')
+    // }
+    // else{
+    //     console.log('nothing')
+    // } -->

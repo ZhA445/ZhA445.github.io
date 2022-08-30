@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Two</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('button').on('click',function(){
+                 $('h2').hide('slow',function(){
+                    alert('ok')
+                 })
+
+            //      $('h2').hide();
+            //      alert('ok')
+            })
+        
+
+        $("a").on('click',function(e){
+            alert('ok')
+            e.preventDefault();
+        })
+
+        $("a").on('click',function(e){
+            alert('ok')
+            e.preventDefault();
+        })
+
+        $("#myform").on('submit', function(e){
+            alert("clicked save!")
+            e.preventDefault()
+        })
+
+        $("#change").on("focus",function(){
+            var total =  Number($("#total").val())
+            var payamount = Number($("payamount").val())
+
+            var change= payamount - total
+            $(this).val(change)
+            
+        })
+
+        $('#major').hide();
+        $('#type').on('change',function(){
+            var value = $(this).val()
+            if(value!=1){
+                $("#major").show();
+
+            }
+            else{
+                $("#major").hide();
+            }
+        })
+
+    })
+    </script>
+</head>
+
+<body>
+
+    <h2>JQuery Events</h2>
+    <button>Click Here!</button>
+
+    <a href="heeps://google.com">Google</a>
+
+    <form action="" method="get" id="myform">
+        <input type="text" name="username" id="username"><br>
+        <input type="email" name="email" id="email"><br>
+        <input type="submit" name="btnsubmit" id="submit" value="Save"><br>
+
+        <select name="type" id="type">
+            <optgroup label="Select Type">
+                <option value="">First Y</option>
+                <option value="">Second Y</option>
+                <option value="">Third Y</option>
+                <option value="">Forth Y</option>
+
+            </optgroup>
+        </select><br>
+
+        <div id="major">
+            <input type="radio" name="major" id="software">
+            <label for="software">Software</label>
+            <input type="radio" name="major" id="hardware">
+            <label for="hardware">Hardware</label>
+        </div><br>
+        <input type="submit" name="btnsubmit" id="submit" value="Save"><br>
+
+    </form>
+
+    <form action="" id="myform2">
+        <input type="number" name="total" id="total"><br>
+        <input type="number" name="payamount" id="payamount"><br>
+        <input type="number" name="change" id="change"><br>
+    </form>
+
+    
+    
+</body>
+</html>

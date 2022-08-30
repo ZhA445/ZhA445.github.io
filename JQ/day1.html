@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+    <script src="jquery.min.js"></script>
+    <script>
+
+        // core js
+
+        var h2 = document.getElementById("myh2")
+        console.log(h2)
+        // jq
+        $(document).ready(function(){
+            var h2withjq = $ ("#myh2")
+            console.log(h2withjq)
+
+            var myp = $("div.myp")
+            console.log(myp)
+
+            var btn = $("button")
+            console.log(btn)
+
+            // $( "form :checked" );
+            var checked = $("form :checked")
+            console.log(checked)
+        })
+    </script>
+
+</head>
+<body>
+    <h2 id="myh2">Hello JQ</h2>
+
+    <p class="myp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, nam mollitia accusantium quod corrupti deleniti magni repellat inventore porro, nostrum qui facere nobis sapiente recusandae alias suscipit possimus non error?</p>
+
+    <div class="myp">This is a div</div>
+
+    <button>Click me</button><br><br>
+
+    <form action="">
+        <input type="text" class="name" id="name" placeholder="Name" checked><br><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br><br>
+        <input type="password" name="password" id="password" placeholder="password"><br><br>
+        <button>submit</button>
+    </form>
+</body>
+</html>

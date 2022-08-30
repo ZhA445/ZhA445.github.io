@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            $('#myform').on('click',function(e){
+                    
+                    
+                    
+                    
+                    // var checkboxes = $('.checkbox');
+
+                    // var read = $('.checkbox').val();
+                    // var guitar = $('.checkbox').val();
+                    // var game  = $('.checkbox').val();
+
+                    // var reading = $('#reading').val();
+                    // var guitar = $('#guitar').val();
+                    // var game = $('#game').val();
+
+                    // console.log(checkboxes)
+                    // console.log(read)
+                    // console.log(guitar)
+                    // console.log(game)
+
+
+                    // console.log(username)
+
+                   
+
+                 
+                    })
+        })
+                    // $('.checkbox').on('select',function(){
+                    //     if(checkboxes == reading){
+                    //         console.log('book')
+                    //     }
+                    // })
+
+                    // if(checkboxes == $('#reading')){
+                    //     alert(`${username} s hobby is reading book.`)
+                    // }
+                    // else if(checkbox == 0 && checkbox == 1){
+                    //     alert(`${username} s hobby is reading book and playing guitar.`)
+                    // }
+                    // else if(checkbox == 0 && checkbox == 2){
+                    //     alert(`${username} s hobby is reading book and playing game.`)
+                    // }
+                    // else if(checkbox == 0 && checkbox == 1 && checkbox == 2){
+                    //     alert(`${username} s hobby is reading book and playing guitar and playing game.`)
+                        
+                    // }
+                    // else if(checkbox == 1){
+                    //     alert(`${username} s hobby is playing guitar.`)
+                    // }
+                    // else if(checkbox == 1 && checkbox == 2){
+                    //     alert(`${username} s hobby is playing guitar and playing game.`)
+                    // }
+                    // else if(checkbox == 2){
+                    //     alert(`${username} s hobby is and playing game.`)
+
+                    // }
+                    // else{
+                    //     alert(`${username} s hobby is another.`)
+                        
+                    // }
+                
+                // })
+            //         $('#reading').on('checked',function(){
+            //                 console.log('reading')
+            //             })
+            //         $('#guitar').on('checked',function(){
+            //                 if(this.checked == true){
+            //                     console.log('guitar')
+            //                 }else{
+            //                     console.log('you unchecked')
+            //                 }
+            //             })   
+            //         $('#game').on('checked',function(){
+            //                 if(this.checked == true){
+            //                     console.log('game')
+            //                 }else{
+            //                     console.log('you unchecked')
+            //                 }
+            //             })
+                    
+            // })
+
+            // })
+    </script>
+</head>
+<body>
+    
+    <form action="" id="myform"></form>
+    
+        <label for="">
+            <input type="text" name="username" id="name" placeholder="Name">
+        </label><br>
+
+        <label for="">Hobbies :</label><br>
+
+        
+            <input type="checkbox"  name="checkbox" id="reading" value='0' checked>
+            <label for="reading">Reading</label>
+            <input type="checkbox"  name="checkbox" id="guitar" value='1'>
+            <label for="guitar">Playing Guitar</label>
+            <input type="checkbox" name="checkbox" id="game" value='2'>
+            <label for="game">Playing Game</label><br>
+            <input type="submit" value="Submit" id="button">
+
+            
+    </form>
+        <!-- <ul>
+            <li>
+                <label for="">
+                    <input type="text" name="username" id="name" placeholder="Name">
+                </label>
+            </li>
+            <li>Hobbies :</li>
+            <li>
+                <div class="box">
+                    <input type="checkbox"  class="checkbox" id="reading" value="0" checked>
+                    <label for="reading">Reading</label>
+                </div>
+            </li>
+            <li>
+                <div class="box">
+                    <input type="checkbox"  class="checkbox" id="guitar" value="1">
+                    <label for="guitar">Playing Guitar</label>
+                </div>
+            </li>
+            <div class="box">
+                <input type="checkbox" class="checkbox" id="game" value="2">
+                <label for="game">Playing Game</label>
+            </div>
+            <div>
+                <input type="button" value="Submit" id="button">
+            </div>
+        </ul> -->
+
+
+
+    
+    <!-- <div class="container">
+        <div>
+            <label for="">
+                <input type="text" name="username" id="name" placeholder="Name">
+            </label>
+        </div><br>
+
+        <div>Hobbies : </div><br>
+
+        <div class="input_box">
+            <div class="box">
+                <input type="checkbox"  class="checkbox" id="reading" value="0" checked>
+                <label for="reading">Reading</label>
+            </div>
+            <div class="box">
+                <input type="checkbox"  class="checkbox" id="guitar" value="1">
+                <label for="guitar">Playing Guitar</label>
+            </div>
+            <div class="box">
+                <input type="checkbox" class="checkbox" id="game" value="2">
+                <label for="game">Playing Game</label>
+            </div><br>
+            <div>
+                <input type="button" value="Submit" id="button">
+            </div>
+        </div>
+
+        <div class="select_values">
+            <p id="valueList"></p>
+        </div>
+
+    </div> -->
+</body>
+</html>
