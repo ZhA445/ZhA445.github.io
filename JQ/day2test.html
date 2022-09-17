@@ -5,25 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/js/all.js">
     <script src="jquery.min.js"></script>
-    <script>
-        $(function(){
-            $("#myform").on('submit',function(e){
-                
-            var username = $('#username').val()
-            var email = $('input[name="email"]').val()
-            alert(username)
-            
-        })
-        })
-    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .head{
+            /* display: flex;
+            justify-content: space-between;
+            margin: 30px 70px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid rgba(0,0,0,0.06); */
+            padding: 3vh 5%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            background: white;
+            border-bottom: 3px solid rgba(0,0,0,0.06);
+        }
+
+        .dark{
+            text-decoration: none;
+            color: black;
+        }
+
+        .search_box{
+            padding: 5vh 5vw 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .search_icon{
+            position: relative;
+            left: 40px;
+        }
+
+        .text{
+            width: 400px;
+            padding: 1.5rem 2rem 1.5rem calc(1.5rem + 50px);
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 17%);
+        }
+
+        /* .form{
+            width: 100px;
+            position: relative;
+            padding: 1.5rem 2rem 1.5rem calc(1.5rem + 50px);
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgb(0 0 0 / 17%);
+        } */
+
+        .filter_box{
+            max-height: 70px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #root * {
+            box-sizing: border-box;
+            color: #111517;
+            transition: transform .2s;
+        }
+
+
+    </style>
 </head>
 <body>
-    <form action="" method="get" id="myform">
-        <input type="text" name="username" id="username" ><br>
-        <input type="email" name="email" id="email"><br>
-        <!-- <input type="number" name="age" id="age"><br> -->
-        <input type="submit" name="btnsubmit" id="submit" value="save">
-    </form>
+    <div class="container">
+        <div class="head">
+            <div class="header">
+                <h2>Where in the world?</h2>
+            </div>
+            <div class="darkmode">
+                <a href="" class="dark"><i class="fa-regular fa-moon"></i>Dark Mode</a>
+            </div>
+        </div>
+
+        <div class="search_box">
+            
+            <form action="" class="form">
+                <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                <input type="text" class="text" placeholder="Search for a Country...">
+            </form>
+            
+            <div class="filter_box">
+                <label for="" class="reigon">
+                    <span>Filter by Reigon</span>
+                </label>
+                <i class="fa-solid fa-caret-down down_icon"></i>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

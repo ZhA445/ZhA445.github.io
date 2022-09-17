@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/js/all.js">
+    <script src="jquery.min.js"></script>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+
+        .container {
+            box-sizing: border-box;
+            color: #111517;
+            transition: transform .2s;
+        }
+
+        .text:focus {
+            outline: none;
+        }
+
+       .head{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 5%;
+        margin: 0 auto;
+        border-bottom: 3px solid rgba(0,0,0,0.06);
+       }
+
+       .darkmode{
+        font-size: 19px;
+       }
+
+       .dark{
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+       }
+
+       .search_box{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 5%;
+        background-color: #fafafa;
+       }
+
+        .text{
+        width: 450px;
+        height: 60px;
+        padding-left: 70px;
+        border-radius: 5px;
+        padding-right: 20px;
+        outline: none;
+        border: 0.1px solid rgba(0,0,0,0.06);
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px;
+        
+       }
+
+        .text:focus {
+            box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px inset;
+        }
+
+        .shadow{
+            box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px inset;
+        }
+
+       .search_icon{
+        position: relative;
+        left: 40px;
+        top: 3px;
+       }
+
+       .filter_by_reigon{
+        max-height: 70px;
+        position: relative;
+        width: 220px;
+        height: 60px;
+        border:  0.1px solid rgba(0,0,0,0.06);
+        border-radius: 5px;
+        padding-left: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px;
+        cursor: pointer;
+       }
+
+       .reigon{
+        position: relative;
+        top: 20px;
+       }
+/*
+       .reigon{
+        max-height: 70px;
+        position: relative;
+        cursor: pointer;
+        /* width: 220px;
+        height: 60px;
+        border:  0.1px solid rgba(0,0,0,0.06);
+        border-radius: 5px;
+        padding-left: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px;
+        outline: none; */
+       /* } */
+
+       .reigon:hover{
+        cursor: pointer;
+       }
+
+       /* .reigon:focus{
+        box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 10px inset;
+       } */
+
+       .bgcolor{
+            background-color: #202C37;
+       }
+
+       .bg_head{
+        background-color: #2B3945;
+       }
+
+       .white{
+        color: white;
+       }
+
+       .down_icon{
+        position: relative;
+        left: 70px;
+        top: 20px;
+       }
+    </style>
+    <script>
+        $(function(){
+            $(".reigon").on('click',function(e){
+                $(".filter_by_reigon").addClass('shadow')
+            })
+            $(".dark").on('click',function(e){
+                $('.search_box').addClass('bgcolor')
+                $('.head').addClass('bg_head')
+                $('.text').addClass('bg_head')
+                $('.reigon').addClass('bg_head')
+                $('.dark').addClass('white')
+                $('.header').addClass('white')
+                $('.form').addClass('white')
+                $('.text').addClass('white')
+                $('.down_icon').addClass('white')
+
+                e.preventDefault()
+            })
+
+            $.get('https://restcountries.com/v3.1/all',function(response){
+                // console.log(response)
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="header">
+                <h2>Where in the world?</h2>
+            </div>
+            <div class="darkmode">
+                <a href="" class="dark"><i class="fa-regular fa-moon"></i>Dark Mode</a>
+            </div>
+        </div>
+
+        <div>
+            <div class="search_box">
+                <div>
+                    <form action="" class="form">
+                        <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                        <input type="text" class="text" placeholder="Search for a Country...">
+                    </form>
+                    
+                </div>
+                <div class="filter_by_reigon">
+                    <!-- <input type="text" class="reigon" placeholder="Filter by Region" readonly >-->
+                    <label for="" class="reigon">
+                        <span>Filter by Reigon</span>
+                    </label>
+                    <i class="fa-solid fa-caret-down down_icon"></i>
+                </div>
+            </div>
+
+            <div class="country">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

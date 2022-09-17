@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes assig 3</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .memes{
+            overflow-x:auto ;
+            white-space: nowrap;
+        }
+
+        .singleMeme {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .left img{
+            width: 500px;
+        }
+        
+    </style>
+    <script>
+        $(function(){
+            $('.singleMeme').hide();
+
+            //Get Memes
+            $.get('https://api.imgflip.com/get_memes',function(response){
+                // console.log(response)
+                if(response.success){
+                    // console.log(response.data.memes)
+                    var data = "";
+                    var memes = response.data.memes
+                    $.each(memes,function(i,v){
+                        data += `<img src ="${v.url}" alt = "" width="200" height = "200" class= "meme" data-boxcount="${v.box_count}" data-id="${v.id}" data-name="${v.name}" data-photo="${v.url}">`
+                    })
+
+                    $(".memes").html(data)
+                }
+            })
+
+            // click event 
+            $(".memes").on("click",'.meme',function(){
+                var id = $(this).data('id')
+                var boxcount= $(this).data('boxcount')
+                var name = $(this).data('name')
+                var photo = $(this).data('photo')
+
+                $('.left').html(`<img src="${photo}" alt="${name}"> `)
+
+                var data = `<h3>${name}</h3>`
+                for(var i= 0; i<boxcount ;i++){
+                    data += `<input type="text" name="box"><br>`
+                }
+                data += `<button class="generatebtn" data-id="${id}">Generate</buttom>`
+                $('.right').html(data)
+
+                $('.singleMeme').show();
+            })
+
+            //Click generate btn
+            $(".right").on("click",'.generatebtn',function(){
+                var id= $(this).data('id')
+                var inputs = $(".right input[name='box']")
+                // console.log(inputs)
+                var boxes =[];
+                $.each(inputs,function(i,v){
+                    let box = {text: $(this).val()}
+                    boxes.push(box) //for elements
+                })
+                // console.log(boxes)
+                $.post('https://api.imgflip.com/caption_image',
+                {
+                    template_id: id,
+                    username : 'ZinHtetAung',
+                    password: '562001622001',
+                    boxes: boxes
+                },function(response){
+                    if(response.success){
+                        var data=`<img src="${response.data.url}" alt="">`
+                        $(".left").html(data)
+                    }
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="memes">
+
+    </div>
+
+    <div class="singleMeme">
+        <div class="left">
+            left
+        </div>
+        <div class="right">
+            right
+        </div>
+
+    </div>
+</body>
+</html>

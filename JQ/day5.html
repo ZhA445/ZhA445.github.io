@@ -53,6 +53,10 @@
             $("#addclass").on('click',function(){
                 $("h2").addClass('title')
             })
+
+            $("#slidedown").on('click',function(){
+                $("p").slideDown();
+            })
         })
     </script>
 </head>
@@ -61,6 +65,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate, ratione, sit porro impedit dolore quas odit provident quasi ducimus odio obcaecati! Odio provident veniam reprehenderit eligendi dolore, quibusdam magni.
     </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veritatis fuga, laboriosam libero velit facere qui cum iusto sint aperiam ipsam minus quis quisquam consequuntur! Temporibus possimus molestias suscipit dolorem.</p>
 
     <div style="background-color:red ; width: 100px; height:100px; position:relative;"></div>
         <button id="hide">Hide</button>
@@ -76,6 +81,9 @@
 
         <button id="addclass">Add Class</button>
 
-    
+        <button id="slidedown">Slide Down</button>
+        <button id="slideup">Slide UP</button>
+        <button id="slidetoggle">Slide Toggle</button>
+
 </body>
 </html>
