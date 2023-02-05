@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <form action="" @submit.prevent="calculate">
+            Feet: <input type="number" name="feet" v-model="feet"><br>
+            Inches: <input type="number" name="inches" v-model="inches"><br>
+            Pound: <input type="number" name="pound" v-model="pound"><br>
+            <button>Calculate</button>
+
+            <!-- conditional statement  -->
+            <p v-if="result > 0 && result < 18.5">{{result}} => Underweight</p>
+            <p v-else-if="result < 24.9">{{result}} => Normalweight</p>
+            <p v-else-if="result < 29.9">{{result}} => Overweight</p>
+            <p v-else>{{result}} => Overing</p>
+
+
+        </form>
+    </div>
+
+    <script>
+
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+        return {
+            feet: '',
+            inches: '',
+            pound: '',
+            result: '0',
+            
+        }
+        },
+        methods:{
+            calculate(){
+                // equation
+                // this.result = this.pound / `((${this.feet}*12)+${this.inches})`*`((${this.feet}*12)+${this.inches})` 
+                this.result =  703 * (this.pound / (((`${this.feet}`*12)+this.inches)*((`${this.feet}`*12)+this.inches)))
+                // this.result = Number(this.feet) + Number(this.inches) + Number(this.pound)
+            }
+        }
+    }).mount('#app')
+    </script>
+
+</body>
+</html> 

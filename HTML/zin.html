@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Own Self</h1>
+    <label for="name">Name</label>
+    <input type="text" name="std_name" id="name" required placeholder="Enter you name">
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" name="std_email" id="email">
+    <br><br>
+    <label for="phone">Phone</label>
+    <input type="number" name="std_number" id="phone">
+    <br><br>
+    <label for="password">Password</label>
+    <input type="password" name="std_password" id="password">
+    <br><br>
+    <label for="passport">Passport</label>
+    <input type="file" accept=".png,.jpg" name="std_passport" id="passport">
+    <br><br>
+    <label for="">Date of Birth</label>
+    <input type="date" name="std_dob" id="dob">
+    <br><br>
+    <label for="">Gender</label>
+    <br>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female </label>
+    <br><br>
+    <label for="year">Years</label>
+    <select name="std_year" id="year">
+        <option value="">Choose your year</option>
+        <option value="1">First Year</option>
+        <option value="2">Second Year</option>
+        <option value="3">Third Year</option>
+    </select>
+    <br><br>
+    <label for="">Hobbies</label><br>
+    <input type="checkbox" name="travelling" id="travelling" value="travelling">
+    <label for="travelling">Travelling</label>
+    <input type="checkbox" name="reading" id="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" name="gaming" id="gaming">
+    <label for="gaming">Gaming </label>
+    <br><br>
+    <label for="address">Address</label>
+    <textarea name="std_address" id="address" cols="20" rows="10"></textarea>
+    <br><br>
+    <input type="time">
+    <br><br>
+    <button type="submit">Save</button>
+</body>
+</html>
