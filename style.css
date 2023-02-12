@@ -1,0 +1,569 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+.mainContainer{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Hamburger menu click */
+.menu{
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to right,white,white);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 19px;
+    display: none;
+}
+
+.menu div{
+    width: 28px;
+    height: 30px;
+    margin: 6px;
+    position: relative;
+}
+
+.menu span{
+    background: black;
+    width: 100%;
+    height: 3px;
+    border: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, width 0.5s;
+}
+
+.menu .line-1{
+    width: 50%;
+    left: 7px;
+    transform:  translate(-50%,-12px);
+    transform-origin: 1px -7px;
+}
+
+.menu .line-3{
+    width: 50%;
+    left: auto;
+    right: 0;
+    transform: translate(0, 10px);
+    transform-origin: 91% 2px;
+}
+
+.openmenu .line-1{
+    transform: translate(0,0) rotate(-45deg);
+}
+
+.openmenu .line-3{
+    transform:  translate(-100%,0) rotate(-45deg);
+}
+
+.openmenu .line-2{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+/* Nav Section  */
+
+ nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: auto;
+    height: 75px;
+    line-height: 75px;
+    background: black;
+  }
+
+  #menu-list{
+    display: flex;
+  }
+
+  @media(max-width:850px){
+    #menu-list{
+      display: grid;
+      height: 250px;
+      position: absolute;
+      background: black;
+      top: 75px;
+      right: 85px;
+      transform: translateY(-100%);
+      z-index: -1;
+      transition: .6s;
+    }
+
+    .menuslide #menu-list{
+        transform: translateY(0);
+        border: 1 px solid orange;
+        z-index: 1;
+        transition-duration: .7s;
+    }
+
+    .nav-item a{
+        position: relative;
+        bottom: 20px;
+    }
+
+    .menu{
+        display: block;
+        position: relative;
+        right: -200px;
+    }
+  }
+
+  @media(max-width:600px){
+    #menu-list{
+        top: 75px;
+        right: 20px;
+        
+      }
+
+    .menu{
+        position: relative;
+        right: -130px;
+    }
+  }
+
+  @media(max-width:430px){
+    .menu{
+        position: relative;
+        right: -105px;
+    }
+
+    #menu-list{
+        top: 75px;
+        right: 8px;
+      }
+  }
+
+  @media(max-width:390px){
+    .menu{
+        position: relative;
+        right: -75px;
+    }
+
+    #menu-list{
+        top: 75px;
+        right: 8px;
+      }
+  }
+
+  @media(max-width:330px){
+    .menu{
+        position: relative;
+        right: -60px;
+    }
+
+    #menu-list{
+        top: 75px;
+        right: 4px;
+      }
+  }
+
+  .nav-item{
+    cursor: pointer;
+    height: 30px;
+    padding: 0 30px;
+    transition: .4s;
+  }
+
+  .nav-item a{
+    text-decoration: none;
+    color: white;
+  }
+
+  
+  /* #hamburger-menu ~ #menu-list{
+    transform: translateY(-13px);
+    border: 1px solid orange;
+    z-index: 1;
+    transition-duration: 1s;
+  } */
+
+ /* nav .nav-list{
+    display: flex;
+  }
+  
+  nav .nav-list .nav-item{
+    cursor: pointer;
+    height: 45px;
+    padding: 0 30px;
+    transition: .4s;
+    margin-top: 17px;
+  }
+  
+  nav .nav-list .nav-item:hover{
+    background-color: rgb(242, 176, 54);
+  }
+
+  nav .nav-list .nav-link{
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    top: -15px;
+  }
+  
+  @media(max-width:935px){
+    
+      nav{
+        padding: 0 2rem;
+      }
+      nav .nav-list .nav-item{
+        padding: 0 20px;
+      }
+  }
+  
+  @media(max-width:775px){
+    nav .nav-list{
+      display: grid;
+      position: absolute;
+      background: black;
+      top: 75px;
+      right: 5px;
+      transform: translateY(-100%);
+      z-index: -1;
+      transition: .6s;
+    }
+  
+    nav .nav-list .nav-item{
+      padding-left: 35px;
+    }
+  
+    nav .navbar-toggler{
+      display: grid !important;
+    }
+  } */
+
+  
+  /* nav .navbar-toggler{
+     height: min-content;
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin: 15px;
+    cursor: pointer;
+  } */
+  
+  /* nav .navbar-toggler .bar{
+    width: 40px;
+    height: 5px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    right: 20px;
+    background: #ffffff;
+    border-radius: 10%;
+    transition: .4s;
+  } */
+  
+  /* input{
+    display: none;
+  } */
+  
+/* .navbar-toggler:checked ~ nav .nav-list{
+    transform: translateY(-13px);
+    border: 1px solid orange;
+} */
+
+  /* input:checked ~ nav .nav-list{
+    transform: translateY(-13px);
+    border: 1px solid orange;
+    z-index: 1;
+  } */
+  
+  /* input:checked ~ nav .navbar-toggler .bar:nth-child(1){
+    position: absolute;
+    transform: rotate(45deg);
+    top: 35px;
+    right: 27px;
+  }
+  
+  input:checked ~nav .navbar-toggler .bar:nth-child(2){
+    display: none;
+  }
+  
+  input:checked ~nav .navbar-toggler .bar:nth-child(3){
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 35px;
+    right: 27px;
+  } */
+
+.hb_logo{
+    width: 120px;
+    height: 30px;
+    margin-left: -20px;
+    margin-top: 4px;
+}
+
+/* Brand name Heart Burn Section */
+
+.brand_name{
+    font-size:larger;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.brand_name1{
+    font-size:larger;
+    color: orange;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.divided{
+    border: 0.1px solid orange;
+    position: relative;
+    bottom: 60px;
+    
+}
+
+.divided1{
+    border: 0.1px solid orange;
+    position: relative;
+    bottom: 15px;
+}
+
+/* Main Page Body Section*/
+
+.background_img{
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.header,.product_header{
+    text-align: center;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    color: orange;
+}
+
+@media(max-width:320px){
+    .product-img{
+        width: 280px;
+    }
+}
+
+@media(max-width:375px){
+    .product-img{
+        width: 340px;
+    }
+}
+
+.product-design{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.product-img{
+    width: 360px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+@media(max-width:320px){
+    .product-img{
+        width: 300px;
+    }
+}
+
+.product-group{
+    margin: 0 auto;
+}
+
+.product-group p{
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: orange;
+    /* font-family: 'DynaPuff', cursive;         <----------------------------- */
+}
+
+/* Footer Section */
+
+
+.footer{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-group{
+    text-align: center;
+    height: 100px;
+    background-color: orange;
+    font-size: larger;
+    word-spacing: 15px;
+    margin: 0 auto;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-link-group{
+    padding-top: 20px;
+    margin-bottom: 10px ;
+}
+
+
+.footer-link:hover{
+    color: whitesmoke;
+    letter-spacing: 2px;
+    transition-duration: 1s;
+}
+
+.footer-icon{
+    width: 300px;
+    height: 50px;
+    float: right;
+    position: relative;
+    bottom: 50px;
+}
+
+@media(max-width: 800px){
+    .footer-icon{
+        display: none;
+    }
+}
+
+.web_icon{
+    color: black;
+    margin: 10px 20px;
+}
+
+.web_icon:hover{
+    opacity: 0.7;
+}
+
+.footer_icon_name{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Creative  Section*/
+
+
+.creative-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.creative-group{
+    width: 48%;
+    margin: 0 auto;
+}
+
+.creative-team{
+    text-align: center;
+    margin: 20px 0;
+    font-size:xx-large;
+}
+
+.creative-img{
+    width: 100%;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.creative-team-shirt{
+    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.front-back-text{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    font-size: large;
+}
+
+.front-back{
+    text-align: center;
+}
+
+.team-front-back{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.team-front-back1{
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media (max-width:1000px){
+    .creative-container{
+        display: block;
+    }
+
+    .creative-group{
+        width: 100%;
+    }
+}
+
+@media (max-width:768px){
+    .creative-group{
+        width: 98%;
+    }
+
+    .team-front-back{
+        width: 90%;
+    }
+}
+
+@media(max-width:320px){
+    .footer-logo-header{
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+
+/* Shop Section */
+
+
+/* About Section */
+
+
+.about-header,.about-heart,.about-burn{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.about-heart,.about-burn{
+    display: inline-block;
+}
+
+.about-burn{
+    color: orange;
+    position: relative;
+    right: 7px;
+}
+
+.about-text{
+    text-align: center;
+}
+
+.about-img{
+    width: 300px;
+}
